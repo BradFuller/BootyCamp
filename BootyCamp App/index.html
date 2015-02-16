@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+  <title>Pykee TestPaper</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+
+    <link rel="import" href="bower_components/core-icons/core-icons.html">
+    <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+    <link rel="import" href="bower_components/core-drawer-panel/core-drawer-panel.html">
+    <link rel="import" href="bower_components/core-menu/core-menu.html">
+    <link rel="import" href="bower_components/core-item/core-item.html">
+    <link rel="import" href="bower_components/font-roboto/roboto.html">
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+    <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+    <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+    <link rel="import" href="bower_components/paper-toast/paper-toast.html">
+    <link rel="import" href="bower_components/paper-item/paper-item.html">
+
+    <style type="text/css">
+        html,body {
+            height: 100%;
+            margin: 0%;
+            background-color: #E5E5E5;
+            font-family: 'RoboDraft', sans-serif;
+        }
+        core-toolbar {
+            background-color: #E91E63;
+            color: white;       
+        }
+        paper-spinner.blue::shadow .circle {
+            border-color: #4285f4;
+        }
+        paper-button.hover:hover {
+        background: #eee;
+        }
+        paper-button[raised].colored {
+        background: #4285f4;
+            color: #fff;
+        }
+        paper-checkbox {
+            padding: 20px 20px 20px 0;
+        }
+    
+        section {
+            width: 300px;
+        }
+    
+        paper-checkbox.blue::shadow #ink[checked] {
+            color: #BBDEFB;
+        }
+
+        paper-checkbox.blue::shadow #checkbox.checked {
+            background-color: #2196F3;
+            border-color: #2196F3;
+        }
+        paper-fab.homebutton {
+            background-color: #2196F3;
+            color: white;
+            position: fixed;
+            margin-bottom: 10px;
+        }
+        [drawer] {
+            background-color: #E5E5E5;
+            border-right: 1px solid #ccc;
+        }
+        drawerMenu{
+            background-color: #2196F3
+        }
+    </style>
+    
+</head>
+
+<body>
+        <core-drawer-panel id="drawerPanel">
+            <core-header-panel drawer>
+                <core-toolbar>Menu</core-toolbar>
+                <core-menu>
+                    <div class="drawerMenu">
+                    <core-selector selected="1">
+                        <paper-shadow style="max-width: 19.5em;">
+                            <paper-item><core-icon icon="home"></core-icon>Home</paper-item>
+                            <paper-item><core-icon icon="settings-phone"></core-icon>Contact Us</paper-item>
+                            <paper-item><core-icon icon="question-answer"></core-icon>About</paper-item>
+                            <paper-item><core-icon icon="archive"></core-icon>PDF Viewer</paper-item>
+                        </paper-shadow>
+                    </core-selector>
+                    </div>
+                </core-menu>
+            </core-header-panel>
+        
+      <div main>
+    
+    <core-toolbar class="medium-tall">
+  
+    <paper-icon-button icon="menu" role="button" tabindex="0" aria-label="menu" id="navicon"></paper-icon-button>
+    <div flex="">BootyCamp App</div>
+    <paper-fab class="homebutton" icon="launch" role="button" tabindex="0" aria-label="launch"></paper-fab>
+    
+    <div class="bottom fit" horizontal="" layout="">
+    
+      <paper-tabs selected="0" flex="" style="max-width: 600px;" role="tablist" horizontal="" center="" layout="">
+    
+        <paper-tab role="tab" inline="" flex="" center-center="" horizontal="" layout="" class="">Home</paper-tab>
+        <paper-tab role="tab" inline="" flex="" center-center="" horizontal="" layout="" class="">About</paper-tab>
+        <paper-tab role="tab" inline="" flex="" center-center="" horizontal="" layout="" class="core-selected" active="">Contact us</paper-tab>
+        
+      </paper-tabs>
+      
+    </div>
+  
+  </core-toolbar>
+    <br>
+        
+        <paper-input label="Username" floatingLabel></paper-input>
+        <br>
+        <paper-checkbox></paper-checkbox>
+          
+      
+    </core-drawer-panel>
+    
+    <script src="app.js"></script>
+</body>
+</html>
